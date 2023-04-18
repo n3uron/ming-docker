@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  n3uron:
+    image: n3uronhub/n3uron:v1.21.4
+    hostname: edge01
+    ports:
+      - 8003:8003
+    volumes:
+      - n3_config:/opt/n3uron/config
+      - n3_data:/opt/n3uron/data
+      - n3_licenses:/opt/n3uron/licenses
+      - n3_log:/opt/n3uron/log
+    restart: always
+
+  hivemq:
+    image: hivemq/hivemq-ce:2023.3
+    ports:
+      - 1883:1883
+    restart: always
+
+  influx:
+    image: influxdb:2.6
+    ports:
+      - 8086:8086
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=n3uron
+      - DOCKER_INFLUXDB_INIT_ORG=N3uron
+      - DOCKER_INFLUXDB_INIT_BUCKET=demo
+    volumes:
+      - influx_config:/etc/influxdb2
+      - influx_data:/var/lib/influxdb2
+    restart: always
+
+  # telegraf:
+  #   image: telegraf:1.26
+  #   command: --config http://influx:8086/api/v2/telegrafs/<ID>
+  #   environment:
+  #     - INFLUX_TOKEN=<TOKEN>
+  #   restart: always
+
+  grafana:
+    image: grafana/grafana-oss:9.4.7
+    ports:
+      - 3000:3000
+    volumes:
+      - grafana_data:/var/lib/grafana
+    restart: always
+
+volumes:
+  n3_config:
+  n3_data:
+  n3_licenses:
+  n3_log:
+  influx_config:
+  influx_data:
+  grafana_data:
