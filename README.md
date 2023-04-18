@@ -1,1 +1,1 @@
-# ming-docker
+# MING (MQTT, InfluxDB, N3uron, Grafana)
