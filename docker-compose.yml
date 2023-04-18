@@ -29,11 +29,17 @@ services:
       - DOCKER_INFLUXDB_INIT_PASSWORD=n3uron
       - DOCKER_INFLUXDB_INIT_ORG=N3uron
       - DOCKER_INFLUXDB_INIT_BUCKET=demo
+      - DOCKER_INFLUXDB_INIT_RETENTION=1w
     volumes:
       - influx_config:/etc/influxdb2
       - influx_data:/var/lib/influxdb2
     restart: always
 
+  ###############################################################################################################
+  # WARNING: When you remove the comments, make sure you respect the spaces and indentation in this YAML file.  #
+  # Failure to do so could break the file and cause issues with Docker Compose commands.                        #
+  ###############################################################################################################
+  
   # telegraf:
   #   image: telegraf:1.26
   #   command: --config http://influx:8086/api/v2/telegrafs/<ID>
