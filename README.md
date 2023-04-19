@@ -1,6 +1,6 @@
 # MING (MQTT, InfluxDB, N3uron, Grafana)
 
-The MING stack is a popular combination of open-source technologies used for building scalable and real-time IoT data processing and visualization systems.
+The MING stack is a popular combination of open-source technologies used for building scalable and real-time Industrial Industrial IoT data processing and visualization systems.
 
 * MQTT is a lightweight messaging protocol designed for constrained devices and low-bandwidth, high-latency or unreliable networks, commonly used for IoT applications.
 * InfluxDB is a scalable, high-performance, distributed, and fault-tolerant time-series database that is optimized for storing and querying large volumes of timestamped data.
@@ -15,4 +15,4 @@ docker compose up -d
 
 ## About Us
 
-At [N3uron](https://n3uron.com/) our mission is to design modern Industrial IoT software solutions to empower organizations to accomplish any data collection system project, whilst minimizing technological and financial obstacles.
+At [N3uron](https://n3uron.com/) our mission is to design modern Industrial IoT software solutions to empower organizations to accomplish any data management project, whilst minimizing technological and financial obstacles.
