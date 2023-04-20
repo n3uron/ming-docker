@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  telegraf:
+    image: telegraf:1.26
+    command: --config http://influx:8086/api/v2/telegrafs/<ID>
+    environment:
+      - INFLUX_TOKEN=<TOKEN>
+    restart: always
