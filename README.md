@@ -10,7 +10,13 @@ The MING stack is a popular combination of open-source technologies used for bui
 ## Deploy
 
 ```shell
-docker compose up -d
+docker compose -f docker-compose.yml up -d
+```
+
+Launch with Telegraf
+
+```shell
+docker compose -f docker-compose.yml -f docker-compose.telegraf.yml up -d
 ```
 
 ## About Us
