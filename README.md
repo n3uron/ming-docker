@@ -7,7 +7,11 @@ The MING stack is a popular combination of open-source technologies used for bui
 * N3uron is an Industrial Edge Platform for DataOps that streamlines the flow of data between industrial devices and business applications, either on-premise or in the cloud.
 * Grafana is an open-source platform for data visualization and monitoring that allows users to create, explore, and share dashboards and alerts for a wide range of data sources, including databases, APIs, and metrics.
 
-## Deploy
+## Usage
+
+See our post --> <https://n3uron.com/simplify-your-industrial-data-management-using-docker-containers/>
+
+<!-- ## Deploy
 
 ```shell
 docker compose -f docker-compose.yml up -d
@@ -17,7 +21,7 @@ Launch with Telegraf
 
 ```shell
 docker compose -f docker-compose.yml -f docker-compose.telegraf.yml up -d
-```
+``` -->
 
 ## About Us
 
