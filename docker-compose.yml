@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   n3uron:
-    image: n3uronhub/n3uron:v1.21.4
+    image: n3uronhub/n3uron:v1.21.6
     hostname: edge01
     ports:
       - 8003:8003
@@ -14,7 +14,7 @@ services:
     restart: always
 
   hivemq:
-    image: hivemq/hivemq-ce:2023.3
+    image: hivemq/hivemq-ce:2023.6
     ports:
       - 1883:1883
     restart: always
